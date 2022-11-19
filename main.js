@@ -13,7 +13,20 @@
 		OLSKFiguresLoad (inputData) {
 			const target = document.createElement('div');
 			document.body.appendChild(target);
-			target.innerHTML = `<script class="OLSKFigures" defer data-domain="${ location.host }" src="${ window.location.host.match('loc.tests') ? '' : mod.OLSKFiguresEndpointURL() }"></script>`;
+
+			// https://stackoverflow.com/questions/2592092/executing-script-elements-inserted-with-innerhtml
+			var setInnerHTML = function(elm, html) {
+			  elm.innerHTML = html;
+			  Array.from(elm.querySelectorAll("script")).forEach( oldScript => {
+			    const newScript = document.createElement("script");
+			    Array.from(oldScript.attributes)
+			      .forEach( attr => newScript.setAttribute(attr.name, attr.value) );
+			    newScript.appendChild(document.createTextNode(oldScript.innerHTML));
+			    oldScript.parentNode.replaceChild(newScript, oldScript);
+			  });
+			}
+			// target.innerHTML = `<script class="OLSKFigures" defer data-domain="${ location.host }" src="${ window.location.host.match('loc.tests') ? '' : mod.OLSKFiguresEndpointURL() }"></script>`;
+			setInnerHTML(target, `<script class="OLSKFigures" defer data-domain="${ location.host }" src="${ window.location.host.match('loc.tests') ? '' : mod.OLSKFiguresEndpointURL() }"></script>`);
 		},
 
 		// MESSAGE
