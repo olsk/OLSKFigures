@@ -26,17 +26,13 @@
 			  });
 			}
 			// target.innerHTML = `<script class="OLSKFigures" defer data-domain="${ location.host }" src="${ window.location.host.match('loc.tests') ? '' : mod.OLSKFiguresEndpointURL() }"></script>`;
-			setInnerHTML(target, `<script class="OLSKFigures" defer data-domain="${ location.host }" src="${ window.location.host.match('loc.tests') ? '' : mod.OLSKFiguresEndpointURL() }"></script>`);
+			setInnerHTML(target, `<script class="OLSKFigures" defer data-domain="${ window.document.currentScript ? window.document.currentScript.getAttribute("data-domain") : location.host }" src="${ window.location.host.match('loc.tests') ? '' : mod.OLSKFiguresEndpointURL() }"></script>`);
 		},
 
 		// MESSAGE
 
 		DOMContentLoaded () {
 			const _mod = (typeof process !== 'undefined' && process.env.npm_lifecycle_script === 'olsk-spec') ? this : mod;
-
-			if (typeof window === 'object' && window.location.host.match('loc.tests')) {
-				return;
-			}
 
 			_mod.OLSKFiguresLoad();
 		},

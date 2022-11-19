@@ -1,9 +1,3 @@
-<%
-locals.OLSKPageAssets = [
-	'main.js',
-];
-%>
 
-<script type="text/javascript">
-	OLSKFigures.OLSKFiguresLoad();
-</script>
+
+<script<%- locals.OLSKFiguresDomain ? ` data-domain="${ locals.OLSKFiguresDomain }"` : '' %> src="http://localhost:4010/main.js"></script>
