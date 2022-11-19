@@ -26,11 +26,7 @@
 			  });
 			}
 			// target.innerHTML = `<script class="OLSKFigures" defer data-domain="${ location.host }" src="${ window.location.host.match('loc.tests') ? '' : mod.OLSKFiguresEndpointURL() }"></script>`;
-			setInnerHTML(target, `<script class="OLSKFigures" defer data-domain="${ (window.document.currentScript || {
-				getAttribute () {
-					return '';
-				},
-			}).getAttribute('data-domain') || location.host }" src="${ window.location.host.match('loc.tests') ? '' : mod.OLSKFiguresEndpointURL() }"></script>`);
+			setInnerHTML(target, `<script class="OLSKFigures" defer data-domain="${ window.OLSKFiguresDomain || location.host }" src="${ window.location.host.match('loc.tests') ? '' : mod.OLSKFiguresEndpointURL() }"></script>`);
 		},
 
 		// MESSAGE

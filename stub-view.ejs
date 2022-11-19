@@ -1,3 +1,9 @@
 
-
-<script<%- locals.OLSKFiguresDomain ? ` data-domain="${ locals.OLSKFiguresDomain }"` : '' %> src="http://localhost:4010/main.js"></script>
+<% if (locals.OLSKFiguresDomain) { -%>
+	
+<script>
+window.OLSKFiguresDomain = "<%= locals.OLSKFiguresDomain %>";
+</script>
+	
+<% } -%>
+<script defer src="http://localhost:4010/main.js"></script>
