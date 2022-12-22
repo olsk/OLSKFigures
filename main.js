@@ -7,7 +7,7 @@
 	const mod = {
 
 		OLSKFiguresEndpointURL () {
-			return 'https://old-fire-5813.dash-cloudflare-com7350.workers.dev/js/script.js';s
+			return 'https://old-fire-5813.dash-cloudflare-com7350.workers.dev/js/script.js';
 		},
 
 		OLSKFiguresLoad (inputData) {
