@@ -11,6 +11,11 @@
 		},
 
 		OLSKFiguresLoad (inputData) {
+			// https://stackoverflow.com/questions/925039/detect-iframe-embedding-in-javascript
+			if (window !== window.top) {
+				return;
+			}
+
 			const target = document.createElement('div');
 			document.body.appendChild(target);
 
