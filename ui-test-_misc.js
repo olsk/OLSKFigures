@@ -2,14 +2,14 @@ const kDefaultRoute = require('./controller.js').OLSKControllerRoutes().shift();
 
 describe('OLSKFigures_Misc', function () {
 
-	before(function() {
-		return browser.OLSKVisit(kDefaultRoute);
-	});
-
 	describe('OLSKFigures', function() {
 
+		before(function() {
+			return browser.OLSKVisit(kDefaultRoute);
+		});
+
 		it('sets data-domain', function () {
-			browser.assert.attribute(OLSKFigures, 'data-domain', 'loc.tests');
+			return browser.assert.attribute(OLSKFigures, 'data-domain', 'loc.tests:' + process.env.PORT);
 		});
 
 		context('OLSKFiguresDomain', function () {
@@ -23,7 +23,7 @@ describe('OLSKFigures_Misc', function () {
 			});
 
 			it('sets data-domain', function () {
-				browser.assert.attribute(OLSKFigures, 'data-domain', OLSKFiguresDomain);
+				return browser.assert.attribute(OLSKFigures, 'data-domain', OLSKFiguresDomain);
 			});
 		
 		});

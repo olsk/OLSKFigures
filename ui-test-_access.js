@@ -13,7 +13,7 @@ describe('OLSKFigures_Access', function () {
 	});
 
 	it('shows OLSKFigures', function () {
-		browser.assert.elements(OLSKFigures, 1);
+		return browser.assert.elements(OLSKFigures, 1);
 	});
 
 });
