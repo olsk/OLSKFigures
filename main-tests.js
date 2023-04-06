@@ -5,7 +5,7 @@ const mod = require('./main.js');
 describe('OLSKFiguresEndpointURL', function test_OLSKFiguresEndpointURL () {
 
 	it('returns string', function () {
-		deepEqual(mod.OLSKFiguresEndpointURL(), 'https://old-fire-5813.dash-cloudflare-com7350.workers.dev/js/script.js');
+		deepEqual(mod.OLSKFiguresEndpointURL(), 'https://figures.rosano.ca/js/script.js');
 	});
 
 });
