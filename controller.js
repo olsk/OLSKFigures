@@ -6,9 +6,7 @@ const mod = {
 			OLSKRouteMethod: 'get',
 			OLSKRouteSignature: 'OLSKFiguresStubRoute',
 			OLSKRouteFunction (req, res, next) {
-				return res.OLSKExpressLayoutRender(require('path').join(__dirname, 'stub-view'), {
-					OLSKFiguresDomain: req.query.OLSKFiguresDomain,
-				});
+				return res.OLSKExpressLayoutRender(require('path').join(__dirname, 'stub-view'));
 			},
 		}];
 	},
