@@ -32,7 +32,10 @@
 
 				return ({
 					'rosano.ca': 'ee1cb071-8dcb-455c-a926-a03842bbf454',
+					'home.rosano.ca': 'ee1cb071-8dcb-455c-a926-a03842bbf454',
 					'rosano.hmm.garden': '8df857eb-2cc5-43ee-bde3-f34db432391a',
+					'ref.rosano.ca': '8df857eb-2cc5-43ee-bde3-f34db432391a',
+					
 					'strolling.rosano.ca': '9d83f3f8-a04d-42be-896c-f916b6e0db4b',
 
 					'0data.app': '49b802c8-f3ad-462a-b513-0708a9ff5087',
