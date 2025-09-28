@@ -45,7 +45,6 @@
 		// LIFECYCLE
 
 		LifecycleModuleDidLoad (debug) {
-			return;
 			(debug || window).document.addEventListener('DOMContentLoaded', mod.DOMContentLoaded);
 		},
 
