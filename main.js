@@ -49,6 +49,7 @@
 					'sharesnip.rosano.ca': 'f38dd1be-6446-4ed3-aa89-d6166e6d731f',
 
 					'idiomatic.rosano.ca': '724e1073-e9b8-4f41-8fcc-0b8a16633377',
+					'memo.rosano.ca': 'd18a50de-8740-455e-bc56-e19756d4a5cc',
 					'massagetxt.rosano.ca': 'cf7fc491-1747-4427-b3b6-cacafffe69d8',
 
 					'archive.rosano.ca': 'e9295a03-3be8-4c2d-98b8-46f37d03a09d',
