@@ -56,7 +56,7 @@
 					
 					'loc.tests': 'test-domain',
 				})[host];
-			})(location.host) }"></script>`);
+			})(location.host) }" data-ackee-opts='{ "ignoreLocalhost": true, "ignoreOwnVisits": true, "detailed": true }'></script>`);
 		},
 
 		// MESSAGE
